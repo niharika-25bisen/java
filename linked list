@@ -1,0 +1,77 @@
+import java.util.Scanner;
+class Car {
+    String name;
+    int tyres;
+    int cc;
+
+    Car(String name, int tyres, int cc) {
+        this.name = name;
+        this.tyres = tyres;
+        this.cc = cc;
+    }
+}
+
+class Node {                                 // Niharika bisen, roll n0. 11
+    Car car;
+    Node next;
+
+    Node(Car car) {
+        this.car = car;
+        this.next = null;
+    }
+}
+
+class CarList {
+    Node head;
+
+    void addCar(Car car) {
+        Node newNode = new Node(car);
+        if (head == null) {
+            head = newNode;
+        } else {
+            Node temp = head;
+            while (temp.next != null)
+                temp = temp.next;
+            temp.next = newNode;
+        }
+    }
+
+    void searchCar(String name) {
+        Node temp = head;
+        boolean found = false;
+
+        while (temp != null) {
+            if (temp.car.name.equalsIgnoreCase(name)) {
+                System.out.println("Car found:");
+                System.out.println(temp.car.name + " | Tyres: " + temp.car.tyres + " | CC: " + temp.car.cc);
+                found = true;
+                break;
+            }
+            temp = temp.next;
+        }
+
+        if (!found) {
+            System.out.println("Car not found in the list.");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        CarList list = new CarList();
+
+        list.addCar(new Car("BMW", 4, 1200));
+        list.addCar(new Car("Mercedes", 4, 1500));
+        list.addCar(new Car("Thar", 4, 2200));
+
+        
+
+        System.out.print("Enter the car name to search: ");
+        String carName = sc.nextLine();
+
+        
+        list.searchCar(carName);
+    }
+}
+
