@@ -11,8 +11,8 @@ class Car {
     }
 }
 
-class Node {                                 // Niharika bisen, roll n0. 11
-    Car car;
+class Node {// Niharika bisen, roll n0. 11
+    Car car;                                 
     Node next;
 
     Node(Car car) {
