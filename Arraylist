@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+
+class Anime {
+    String title;
+    String genre;
+    double rating;
+
+    Anime(String title, String genre, double rating) {
+        this.title = title;
+        this.genre = genre;
+        this.rating = rating;
+    }
+
+    void display() {
+        String stars = "⭐".repeat((int)Math.round(rating));
+        System.out.printf("🎬 %-20s | Genre: %-10s | Rating: %.1f %s%n", title, genre, rating, stars);
+    }
+}
+
+public class AnimeTracker {
+    public static void main(String[] args) {
+        ArrayList<Anime> watchlist = new ArrayList<>();
+
+        // Adding anime entries
+        watchlist.add(new Anime("Attack on Titan", "Action", 9.5));
+        watchlist.add(new Anime("Your Name", "Romance", 8.8));
+        watchlist.add(new Anime("Jujutsu Kaisen", "Supernatural", 9.0));
+        watchlist.add(new Anime("Spy x Family", "Comedy", 8.6));
+        watchlist.add(new Anime("Death Note", "Thriller", 9.3));
+
+        System.out.println("📺 Your Anime Watchlist:");
+        watchlist.forEach(Anime::display);
+    }
+}
