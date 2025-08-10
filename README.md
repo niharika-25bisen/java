@@ -11,6 +11,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0026-remove-duplicates-from-sorted-array](https://github.com/niharika-25bisen/java/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0027-remove-element](https://github.com/niharika-25bisen/java/tree/master/0027-remove-element) |
 | [0035-search-insert-position](https://github.com/niharika-25bisen/java/tree/master/0035-search-insert-position) |
+| [0057-insert-interval](https://github.com/niharika-25bisen/java/tree/master/0057-insert-interval) |
 ## Hash Table
 |  |
 | ------- |
