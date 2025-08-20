@@ -1,0 +1,18 @@
+public class ArrayLinkedList {
+
+    public static void main(String[]args){
+        int[]INFO= {10,20,30,40,50};
+        int[]LINK= {1,2,3,4,-1};
+
+        int START=0;
+        int ptr=START;
+
+        System.out.println("Traversed Linked List");
+
+        while(ptr!=-1){
+            System.out.println(INFO[ptr]+" ");
+
+            ptr=LINK[ptr];
+        }
+    }
+}
