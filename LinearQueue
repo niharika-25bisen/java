@@ -1,0 +1,55 @@
+import java util.Scanner;
+public class LinearQueue{
+
+public static final int MAX=5;
+int[]queue=new int[MAX];
+int front=-1;
+int rear=-1;
+
+public void enqueue(int data){
+    if(rear==MAX-1){
+        System.out.println("queue overflow:cannot insert"+data);
+        return;
+    }
+    if(front==-1)front= 0;
+    rear++;
+    queue[rear] =data;
+    System.out.println("inserted:"+data);
+}
+public void dequeue() {
+    if(front==-1||front>rear){
+        System.out.println("queue underflow:no elements to delete");
+        return;
+    }
+    System.out.println("deleted:"+queue[front]);
+    return;
+}
+public void display(){
+    if(front==-1||front>rear){
+        System.out.println("queue is empty");
+        return;
+    }
+    System.out.println("queue elements:");
+    for(int i=front;i<=rear;i++){
+        System.out.println(queue[i]+" ");
+    }
+    System.out.println();
+}
+public static void main(String[]args){
+    LinearQueue q=new LinearQueue();
+    Scanner sc=new Scanner(System.in);
+    int choice,data;
+
+    do{
+        System.out.println("Queue menu");
+        System.out.println("1.Enqueue");
+        System.out.println("2.Dequeue");
+        System.out.println("3.Display");
+        System.out.println("4.Exit");
+        System.out.println("Enter your choice:");
+        choice=sc.nextInt();
+
+        
+    }
+}
+}
